@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "632197672939",
+    "project_id": "summit-stories-b4293",
+    "storage_bucket": "summit-stories-b4293.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632197672939:android:c041e509c9b9572ce0f3ae",
+        "android_client_info": {
+          "package_name": "com.example.summit_stories"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn2EE89RBEjMgDuTdB1AxyNHew7M4n0mU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
