@@ -11,7 +11,8 @@ class PoiService {
     try {
       final json = await rootBundle.loadString('assets/pois.json');
       final list = jsonDecode(json) as List<dynamic>;
-      _cache = list.map((e) => Poi.fromJson(e as Map<String, dynamic>)).toList();
+      _cache =
+          list.map((e) => Poi.fromJson(e as Map<String, dynamic>)).toList();
       return _cache!;
     } catch (e) {
       return [];

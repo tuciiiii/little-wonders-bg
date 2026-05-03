@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../theme/app_theme.dart';
 
 class LoadingSkeletonWidget extends StatefulWidget {
@@ -25,30 +26,45 @@ class _LoadingSkeletonWidgetState extends State<LoadingSkeletonWidget>
   @override
   void initState() {
     super.initState();
-    _ctrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 1400))..repeat();
+
+    _ctrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1400),
+    )..repeat();
+
     _anim = Tween<double>(begin: -0.5, end: 1.5).animate(
-        CurvedAnimation(parent: _ctrl, curve: Curves.easeInOutSine));
+      CurvedAnimation(parent: _ctrl, curve: Curves.easeInOutSine),
+    );
   }
 
   @override
-  void dispose() { _ctrl.dispose(); super.dispose(); }
+  void dispose() {
+    _ctrl.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _anim,
       builder: (_, __) => Container(
-        width: widget.width, height: widget.height,
+        width: widget.width,
+        height: widget.height,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(widget.borderRadius),
           gradient: LinearGradient(
-            colors: [AppTheme.glassSurface, AppTheme.glassSurfaceVariant, AppTheme.glassSurface],
+            colors: [
+              AppTheme.glassSurface,
+              AppTheme.accentOrange.withValues(alpha: 0.12),
+              AppTheme.glassSurface,
+            ],
             stops: [
               (_anim.value - 0.3).clamp(0.0, 1.0),
               _anim.value.clamp(0.0, 1.0),
               (_anim.value + 0.3).clamp(0.0, 1.0),
             ],
-            begin: Alignment.centerLeft, end: Alignment.centerRight,
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
           ),
         ),
       ),

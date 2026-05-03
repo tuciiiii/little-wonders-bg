@@ -1,17 +1,43 @@
-# summit_stories
+# Little Wonders BG / Summit Stories
 
-A new Flutter project.
+Мобилно Flutter приложение за откриване, посещаване и споделяне на български природни и културно-исторически забележителности.
 
-## Getting Started
+## Идея
 
-This project is a starting point for a Flutter application.
+Little Wonders BG насърчава потребителите да опознават България чрез интерактивна карта, туристически обекти, дневник на посещенията, система с точки, значки, нива, общност и класация.
 
-A few resources to get you started if this is your first Flutter project:
+## Основни функционалности
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Интерактивна карта с природни и културни забележителности
+- Филтриране на обекти по категория
+- Детайлен екран за всяко място
+- GPS check-in при достигане на забележителност
+- Добавяне на бележка и снимка чрез камера
+- Дневник на посетените места
+- Система с точки, нива и значки
+- Профил с прогрес и последни приключения
+- Общност с публикации, снимки, харесвания и коментари
+- Класация на активните потребители
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Използвани технологии
+
+- Flutter и Dart
+- Riverpod за управление на състоянието
+- Firebase Authentication
+- Cloud Firestore
+- Firebase Storage
+- Hive за локално съхранение
+- Google Maps Flutter
+- Geolocator и Permission Handler
+- Image Picker
+- Cached Network Image
+
+## Данни
+
+Обектите в приложението се зареждат от локален JSON файл: `assets/pois.json`.
+
+## Стартиране
+
+```bash
+flutter pub get
+flutter run

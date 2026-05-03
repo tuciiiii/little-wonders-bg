@@ -32,7 +32,10 @@ dev_dependencies:
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: assets/icon/logo.png
+  image_path: "assets/icon/app_icon.png"
+  adaptive_icon_background: "#241735"
+  adaptive_icon_foreground: "assets/icon/app_icon.png"
+
   min_sdk_android: 21
 
 flutter:
@@ -59,3 +62,5 @@ flutter:
   assets:
     - assets/pois.json
     - assets/images/
+    - assets/images/demo/
+    - assets/icon/
